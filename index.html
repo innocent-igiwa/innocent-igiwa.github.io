@@ -3,186 +3,208 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>All Projects – Innocent Igiwa</title>
+  <title>Innocent Igiwa - Portfolio</title>
   <style>
-    :root {
-      --accent-color: #0073e6;
-    }
-
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 2rem;
+      margin: 0; padding: 0;
+      background-color: #f5f5f5;
       color: #333;
     }
-
-    h1 {
-      text-align: center;
-      color: var(--accent-color);
-      margin-bottom: 0.5rem;
-    }
-
-    h3.subtitle {
-      text-align: center;
-      color: #444;
-      font-weight: normal;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-
-    p.bio {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      line-height: 1.5;
-    }
-
-    .project {
-      background: white;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 1rem 1.5rem;
-      margin-bottom: 1.5rem;
+    header {
+      background-color: #004d99;
+      color: white;
+      padding: 1rem 2rem;
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      text-align: left;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
     }
-
-    .project img {
-      width: 150px;
-      height: 100px;
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
       object-fit: cover;
-      border-radius: 4px;
-      flex-shrink: 0;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+      border: 2px solid white;
     }
-
-    .project h3 {
-      margin: 0 0 0.5rem;
-      color: var(--accent-color);
+    header .intro {
+      flex-grow: 1;
     }
-
-    .project p {
-      margin: 0.25rem 0;
-      line-height: 1.4;
-      flex: 1;
+    header .intro h1 {
+      margin: 0;
+      font-size: 1.8rem;
     }
-
-    .project a {
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .project a:hover {
-      text-decoration: underline;
-    }
-
-    a#back {
-      display: block;
-      text-align: center;
-      margin-top: 3rem;
-      color: var(--accent-color);
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    a#back:hover {
-      text-decoration: underline;
-    }
-
-    #contact {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      text-align: center;
-      border-top: 1px solid #ddd;
-    }
-
-    #contact h2 {
-      color: var(--accent-color);
-    }
-
-    #contact a {
-      margin: 0 10px;
-      color: var(--accent-color);
-      text-decoration: none;
+    header .intro p {
+      margin: 0.2rem 0 0;
+      font-style: italic;
       font-weight: 500;
+      color: #cce0ff;
     }
-
-    #contact a:hover {
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section.bio {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    section.projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card img {
+      max-width: 100%;
+      border-radius: 5px;
+      object-fit: cover;
+      height: 140px;
+      margin-bottom: 1rem;
+    }
+    .project-card h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+      color: #004d99;
+    }
+    .project-card p {
+      flex-grow: 1;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .project-card a {
+      color: #004d99;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+    .more-projects-btn {
+      margin: 2rem auto;
+      display: block;
+      background-color: #004d99;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      max-width: 200px;
+      text-decoration: none;
+    }
+    .more-projects-btn:hover {
+      background-color: #003366;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 1rem 2rem;
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    footer a {
+      color: #66ccff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
-      .project {
+    /* Responsive */
+    @media (max-width: 800px) {
+      section.projects {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 500px) {
+      section.projects {
+        grid-template-columns: 1fr;
+      }
+      header {
         flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      header .intro h1 {
+        font-size: 1.5rem;
         text-align: center;
       }
-
-      .project img {
-        width: 100%;
-        height: auto;
-        max-height: 200px;
+      header .intro p {
+        text-align: center;
+      }
+      footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
-
-  <h1>All Projects</h1>
-  <h3 class="subtitle">Data Analyst | Business Intelligence Specialist</h3>
-  <p class="bio">
-    I help organizations unlock insights through data. My expertise spans Power BI, Excel, and SQL for building dashboards and reports that drive smart decision-making.
-  </p>
-
-  <!-- Project 4 -->
-  <div class="project">
-    <img src="project4.png" alt="Customer Insights Dashboard" />
-    <div>
-      <h3>Customer Insights Dashboard</h3>
-      <p>Built an interactive Power BI dashboard using customer behavior data. Analyzed churn rates, segmented demographics, and customer satisfaction to drive retention strategies.</p>
-      <p><a href="customer_dashboard.pdf" target="_blank">View PDF Dashboard</a></p>
+  <header>
+    <img src="profile_photo.jpeg" alt="Innocent Igiwa Profile Photo" />
+    <div class="intro">
+      <h1>Innocent Igiwa</h1>
+      <p>Software Developer | Problem Solver | Tech Enthusiast</p>
     </div>
-  </div>
+  </header>
 
-  <!-- Project 5 -->
-  <div class="project">
-    <img src="project5.png" alt="Retail Sales Performance Tracker" />
-    <div>
-      <h3>Retail Sales Performance Tracker</h3>
-      <p>Designed a regional sales tracking dashboard for a retail chain. Included daily KPIs, product performance, regional breakdowns, and sales target monitoring in Power BI.</p>
-      <p><a href="retail_dashboard.pdf" target="_blank">View PDF Dashboard</a></p>
-    </div>
-  </div>
+  <main>
+    <section class="bio">
+      <p>
+        Passionate software developer with experience in web technologies, 
+        project management, and delivering impactful digital solutions. 
+        Committed to continuous learning and innovation.
+      </p>
+    </section>
 
-  <!-- Project 6 -->
-  <div class="project">
-    <img src="project6.png" alt="Budget vs Actual Analysis" />
-    <div>
-      <h3>Budget vs Actual Analysis</h3>
-      <p>Created an Excel + Power BI solution for budget tracking across departments. Visual comparisons helped finance teams monitor budget compliance in real time.</p>
-      <p><a href="budget_dashboard.pdf" target="_blank">View PDF Dashboard</a></p>
-    </div>
-  </div>
+    <section class="projects">
+      <!-- Project 1 -->
+      <article class="project-card">
+        <img src="img1.jpeg" alt="Restaurant Website Image" />
+        <h3>Responsive Restaurant Website</h3>
+        <p>A mobile-friendly website for a restaurant featuring menus, reservation forms, and contact details.</p>
+        <a href="pdf1.pdf" target="_blank" rel="noopener">View Project PDF</a>
+      </article>
 
-  <!-- Back to main -->
-  <a id="back" href="index.html">← Back to Main Portfolio</a>
+      <!-- Project 2 -->
+      <article class="project-card">
+        <img src="img2.jpeg" alt="Task Manager App Image" />
+        <h3>Task Manager Application</h3>
+        <p>A task management app to organize daily to-dos, set deadlines, and track progress.</p>
+        <a href="pdf2.pdf" target="_blank" rel="noopener">View Project PDF</a>
+      </article>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>
-      <a href="mailto:innocent.igiwa@yahoo.com" target="_blank">Email</a> |
-      <a href="https://www.linkedin.com/in/innocent-igiwa/" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/innocent-igiwa" target="_blank">GitHub</a> |
-      <a href="https://innocent-igiwa.github.io/" target="_blank">Portfolio</a>
-    </p>
-  </section>
+      <!-- Project 3 -->
+      <article class="project-card">
+        <img src="img3.jpeg" alt="E-commerce Platform Image" />
+        <h3>E-commerce Platform</h3>
+        <p>An online shopping platform with product catalog, shopping cart, and payment integration.</p>
+        <a href="pdf3.pdf" target="_blank" rel="noopener">View Project PDF</a>
+      </article>
+    </section>
 
+    <a href="all-projects.html" class="more-projects-btn">More Projects</a>
+  </main>
+
+  <footer>
+    <a href="mailto:innocent.igiwa@yahoo.com" target="_blank" rel="noopener">Email</a>
+    <a href="https://www.linkedin.com/in/innocent-igiwa/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/innocent-igiwa" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://innocent-igiwa.github.io/" target="_blank" rel="noopener">Portfolio</a>
+  </footer>
 </body>
 </html>
