@@ -3,112 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Innocent Igirwa Portfolio</title>
+  <title>Innocent Igiwa – Portfolio</title>
   <style>
+    :root {
+      --accent-color: #0073e6;
+    }
     body {
       font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
-      background: #f5f5f5;
+      background-color: #f9f9f9;
+      margin: 2rem;
       color: #333;
+      scroll-behavior: smooth;
     }
-    header {
+
+    /* Layout */
+    #projects {
+      max-width: 900px;
+      margin: 0 auto;
       text-align: center;
-      margin-bottom: 2rem;
     }
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+
+    #profile-photo {
+      width: 140px;
+      height: 140px;
       object-fit: cover;
-      border: 3px solid #555;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      margin: 0 auto 1rem;
+      display: block;
+      border: 3px solid var(--accent-color);
     }
-    header h1 {
-      margin-top: 0.5rem;
+
+    #projects h2 {
       font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--accent-color);
     }
-    section#projects {
-      margin-bottom: 3rem;
-    }
+
     .project {
-      background: #fff;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: left;
     }
+
+    .project img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+
     .project h3 {
-      margin-top: 0;
+      margin: 0 0 0.5rem;
+      color: var(--accent-color);
     }
-    #more-projects-btn {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #0073e6;
-      color: white;
-      border: none;
-      border-radius: 5px;
+
+    .project p {
+      margin: 0.25rem 0;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .project a {
+      color: var(--accent-color);
       text-decoration: none;
-      cursor: pointer;
       font-weight: bold;
     }
-    section#contact {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    #more-projects-btn {
+      display: inline-block;
+      margin: 2rem auto 0;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    #more-projects-btn:hover {
+      background-color: #005bb5;
+    }
+
+    @media (max-width: 600px) {
+      .project {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .project img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+      }
+    }
+
+    /* Contact Section */
+    #contact {
+      max-width: 900px;
+      margin: 4rem auto 0;
+      padding-top: 2rem;
+      border-top: 2px solid var(--accent-color);
       text-align: center;
     }
-    section#contact h2 {
-      margin-top: 0;
+
+    #contact h2 {
+      color: var(--accent-color);
+      margin-bottom: 1rem;
     }
-    section#contact a {
-      display: inline-block;
-      margin: 0.5rem 1rem;
-      color: #0073e6;
+
+    #contact a {
+      margin: 0 0.8rem;
+      color: var(--accent-color);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
+      font-size: 1.1rem;
     }
-    section#contact a:hover {
+
+    #contact a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="profile_photo.jpeg" alt="Innocent Igirwa Profile Photo" />
-  <h1>Innocent Igirwa</h1>
-</header>
+  <!-- Profile Photo -->
+  <section id="projects">
+    <img
+      src="profile_photo.jpeg"
+      alt="Innocent Igiwa Profile Photo"
+      id="profile-photo"
+      loading="lazy"
+    />
+    <h2>Projects</h2>
 
-<section id="projects">
-  <h2>Projects</h2>
+    <!-- Project 1 -->
+    <div class="project">
+      <img src="trinitybridge_dashboard.png" alt="Trinitybridge Dashboard Screenshot" />
+      <div>
+        <h3>TrinityBridge Fee Performance & Income Dashboard</h3>
+        <p>Designed a detailed financial dashboard analyzing £1.55bn AUM across portfolios. It provided insights on fee variance, income loss from zero-fee accounts, and manager-level fee performance, supporting strategic revenue optimization.</p>
+        <p><a href="trinitybridge_dashboard.pdf" target="_blank" rel="noopener noreferrer">View PDF Dashboard</a></p>
+      </div>
+    </div>
 
-  <div class="project">
-    <h3>Project One</h3>
-    <p>Brief description of project one.</p>
-  </div>
+    <!-- Project 2 -->
+    <div class="project">
+      <img src="ukri_dashboard.png" alt="UKRI Dashboard Screenshot" />
+      <div>
+        <h3>UKRI Funding Distribution & Project Insights</h3>
+        <p>Built a Power BI report for analyzing £8.93bn in UK Research and Innovation (UKRI) funding across institutions and project types. It includes breakdowns by region, council, institution type, and project status.</p>
+        <p><a href="ukri_dashboard.pdf" target="_blank" rel="noopener noreferrer">View PDF Dashboard</a></p>
+      </div>
+    </div>
 
-  <div class="project">
-    <h3>Project Two</h3>
-    <p>Brief description of project two.</p>
-  </div>
+    <!-- Project 3 -->
+    <div class="project">
+      <img src="bupa_dashboard.png" alt="Bupa Dashboard Screenshot" />
+      <div>
+        <h3>Bupa Risk & Complaints Analysis Dashboard</h3>
+        <p>Developed a Power BI dashboard to monitor risk assessments, complaint trends, and policy cancellations. This visual tool helped stakeholders track key metrics and drive data-informed decisions across customer service and compliance teams.</p>
+        <p><a href="bupa_dashboard.pdf" target="_blank" rel="noopener noreferrer">View PDF Dashboard</a></p>
+      </div>
+    </div>
 
-  <div class="project">
-    <h3>Project Three</h3>
-    <p>Brief description of project three.</p>
-  </div>
+    <!-- More Projects Button -->
+    <a href="all-projects.html" id="more-projects-btn">More Projects</a>
+  </section>
 
-  <a id="more-projects-btn" href="all-projects.html">More Projects</a>
-</section>
-
-<section id="contact">
-  <h2>Contact Me</h2>
-  <a href="mailto:innocent.igiwa@yahoo.com" target="_blank" rel="noopener noreferrer">Email</a>
-  <a href="https://www.linkedin.com/in/innocent-igiwa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  <a href="https://github.com/innocent-igiwa" target="_blank" rel="noopener noreferrer">GitHub</a>
-  <a href="https://innocent-igiwa.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a>
-</section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <a href="mailto:innocent.igiwa@yahoo.com" target="_blank" rel="noopener noreferrer">Email</a>
+    <a href="https://www.linkedin.com/in/innocent-igiwa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/innocent-igiwa" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://innocent-igiwa.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+  </section>
 
 </body>
 </html>
