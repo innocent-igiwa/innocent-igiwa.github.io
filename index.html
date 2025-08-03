@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My BI Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Innocent Igiwa | BI Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-50 text-gray-900 font-sans">
   <!-- Header -->
-  <header class="text-center py-10">
-    <h1 class="text-4xl font-bold">INNOCENT IGIWA PORTFOLIO PREVIEW</h1>
-    <p class="text-lg text-gray-600">Showcasing my Power BI Dashboards</p>
+  <header class="text-center py-12 bg-white shadow-sm">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Innocent Igiwa</h1>
+    <p class="text-lg md:text-xl text-gray-600">Power BI Portfolio Showcase</p>
   </header>
 
   <!-- Dashboard Grid -->
-  <main class="grid grid-cols-1 md:grid-cols-2 gap-8 px-10">
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-10 px-6 md:px-16 py-12">
     <!-- Dashboard 1 -->
-    <div class="bg-white rounded-2xl shadow p-4">
-      <h2 class="text-xl font-semibold">Hospital Operations and Patient Flow Dashboard</h2>
-      <p class="text-gray-600 mb-3">
-        This dashboard combines operational and financial analytics to deliver actionable insights into hospital performance. It tracks key metrics such as revenue streams, patient volumes, and average wait times, segmented by patient class (Medicare, Corporate, HMO, Insurance, and Private). Using data visualizations—including heatmaps, trend lines, and performance distributions—it highlights peak demand periods, workload allocation among doctors, and the financial impact of patient delays. Designed to support decision-making, it demonstrates how advanced data modeling and visualization techniques can optimize resource allocation, improve patient experience, and drive revenue growth.
-      </p>
-      <img src="assets/nhs_dashboard_page1.png" alt="Hospital Operations and Patient Flow Dashboard" class="rounded-lg hover:scale-105 transition-transform duration-300">
-      <div class="mt-4">
-        <a href="assets/nhs_dashboard.pdf" target="_blank" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+    <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between">
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Hospital Operations and Patient Flow Dashboard</h2>
+        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+          This dashboard combines operational and financial analytics to deliver actionable insights into hospital performance. It tracks key metrics such as revenue streams, patient volumes, and average wait times, segmented by patient class. Using data visualizations—including heatmaps, trend lines, and performance distributions—it highlights peak demand periods, workload allocation among doctors, and the financial impact of patient delays.
+        </p>
+      </div>
+      <div>
+        <img src="assets/nhs_dashboard_page1.png" alt="Hospital Operations and Patient Flow Dashboard" class="rounded-xl mb-4 hover:scale-105 transition-transform duration-300 shadow" />
+        <a href="assets/nhs_dashboard.pdf" target="_blank" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
           View Full 2-Page Dashboard (PDF)
         </a>
       </div>
     </div>
 
     <!-- Dashboard 2 -->
-    <div class="bg-white rounded-2xl shadow p-4">
-      <h2 class="text-xl font-semibold">Customer Insights Dashboard</h2>
-      <p class="text-gray-600 mb-3">
-        Analyzes customer behavior, segmentation, and retention metrics.
-      </p>
-      <img src="assets/customer-dashboard.png" alt="Customer Insights Dashboard" class="rounded-lg hover:scale-105 transition-transform duration-300">
-      <div class="mt-4">
-        <a href="assets/customer-dashboard.pdf" target="_blank" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+    <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between">
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Customer Insights Dashboard</h2>
+        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+          This dashboard analyzes customer behavior, segmentation, and retention metrics to help understand trends, identify high-value customers, and support data-driven marketing strategies.
+        </p>
+      </div>
+      <div>
+        <img src="assets/customer-dashboard.png" alt="Customer Insights Dashboard" class="rounded-xl mb-4 hover:scale-105 transition-transform duration-300 shadow" />
+        <a href="assets/customer-dashboard.pdf" target="_blank" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
           View Full Dashboard (PDF)
         </a>
       </div>
@@ -45,8 +49,8 @@
   </main>
 
   <!-- Footer -->
-  <footer class="text-center py-6 text-gray-500">
-    © 2025 Your Name | Built with GitHub Pages
+  <footer class="text-center py-6 text-gray-500 text-sm">
+    © 2025 Innocent Igiwa | Built with GitHub Pages
   </footer>
 </body>
 </html>
