@@ -3,179 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Innocent Igiwa - Senior Business Intelligence and Data Analyst</title>
+  <title>Projects Showcase</title>
   <style>
     :root {
-      --primary-color: #2c3e50;
-      --accent-color: #2980b9;
-      --background-color: #ffffff;
-      --text-color: #333333;
-      --max-width: 900px;
-      --font-family: "Segoe UI", sans-serif;
+      --accent-color: #2874A6; /* Example accent color */
     }
-
     body {
-      margin: 0;
-      background: var(--background-color);
-      font-family: var(--font-family);
-      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 2rem;
+      color: #333;
     }
-
-    header {
-      background: var(--primary-color);
-      color: white;
+    #projects {
+      max-width: 900px;
+      margin: 0 auto;
       text-align: center;
-      padding: 1.5rem 1rem;
     }
-
-    header nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    #profile-photo {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      margin: 0 auto 1rem;
+      display: block;
+      border: 3px solid var(--accent-color);
+    }
+    #projects h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--accent-color);
+    }
+    .project {
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: left;
     }
-
-    header nav ul li a {
-      color: white;
+    .project img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+    .project h3 {
+      margin: 0 0 0.5rem;
+      color: var(--accent-color);
+    }
+    .project p {
+      margin: 0.25rem 0;
+      line-height: 1.4;
+      flex: 1;
+    }
+    .project a {
+      color: var(--accent-color);
       text-decoration: none;
       font-weight: bold;
     }
-
-    main {
-      max-width: var(--max-width);
-      margin: 2rem auto;
-      padding: 0 1rem;
+    .project a:hover {
+      text-decoration: underline;
     }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    h1, h2 {
-      color: var(--primary-color);
-    }
-
-    #about {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      align-items: center;
-    }
-
-    #about img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 3px solid var(--accent-color);
-      object-fit: cover;
-    }
-
-    .project {
-      border: 1px solid #ddd;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-bottom: 2rem;
-    }
-
-    .project img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin-bottom: 0.5rem;
-    }
-
-    .project a {
-      color: var(--accent-color);
-    }
-
-    #contact p {
-      margin: 0.5rem 0;
-    }
-
-    footer {
+    #more-projects-btn {
+      display: inline-block;
+      margin: 2rem auto 0;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
       text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-      border-top: 1px solid #eee;
-      padding: 1rem 0;
+    }
+    #more-projects-btn:hover {
+      background-color: #1f6391;
     }
 
     @media (max-width: 600px) {
-      #about {
+      .project {
         flex-direction: column;
         text-align: center;
+      }
+      .project img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
       }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-
-  <!-- About Section -->
-  <section id="about">
-    <img src="https://via.placeholder.com/150" alt="Profile photo of Innocent Igiwa" />
-    <div>
-      <h1>Innocent Igiwa</h1>
-      <h2>Senior Business Intelligence and Data Analyst</h2>
-      <p>
-        I am a Senior Business Intelligence and Data Analyst with over five years of experience turning complex data into clear, actionable insights that drive strategic business growth. Skilled in Power BI, Tableau, SQL, and Python, I design automated reporting solutions and data-driven tools that significantly improve operational efficiency. I am passionate about using analytics and AI ethically to solve real business problems and have led projects that reduced process inefficiencies by over 80%. Dedicated to fostering collaboration and mentoring teams, I strive to empower others through data-driven decision-making.
-      </p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
   <section id="projects">
+    <img
+      src="profile_photo.jpeg"
+      alt="Profile Photo"
+      id="profile-photo"
+      loading="lazy"
+    />
     <h2>Projects</h2>
 
     <div class="project">
       <img src="trinitybridge_dashboard.png" alt="Trinitybridge Dashboard Screenshot" />
-      <h3>TrinityBridge Fee Performance & Income Dashboard</h3>
-      <p>Designed a detailed financial dashboard analyzing £1.55bn AUM across portfolios. It provided insights on fee variance, income loss from zero-fee accounts, and manager-level fee performance, supporting strategic revenue optimization.</p>
-      <p><a href="trinitybridge_dashboard.pdf" target="_blank">View PDF Dashboard</a></p>
+      <div>
+        <h3>TrinityBridge Fee Performance & Income Dashboard</h3>
+        <p>Designed a detailed financial dashboard analyzing £1.55bn AUM across portfolios. It provided insights on fee variance, income loss from zero-fee accounts, and manager-level fee performance, supporting strategic revenue optimization.</p>
+        <p><a href="trinitybridge_dashboard.pdf" target="_blank" rel="noopener noreferrer">View PDF Dashboard</a></p>
+      </div>
     </div>
 
     <div class="project">
       <img src="ukri_dashboard.png" alt="UKRI Dashboard Screenshot" />
-      <h3>UKRI Funding Distribution & Project Insights</h3>
-      <p>Built a Power BI report for analyzing £8.93bn in UK Research and Innovation (UKRI) funding across institutions and project types. It includes breakdowns by region, council, institution type, and project status.</p>
-      <p><a href="ukri_dashboard.pdf" target="_blank">View PDF Dashboard</a></p>
+      <div>
+        <h3>UKRI Funding Distribution & Project Insights</h3>
+        <p>Built a Power BI report for analyzing £8.93bn in UK Research and Innovation (UKRI) funding across institutions and project types. It includes breakdowns by region, council, institution type, and project status.</p>
+        <p><a href="ukri_dashboard.pdf" target="_blank" rel="noopener noreferrer">View PDF Dashboard</a></p>
+      </div>
     </div>
 
     <div class="project">
       <img src="bupa_dashboard.png" alt="Bupa Dashboard Screenshot" />
-      <h3>Bupa Risk & Complaints Analysis Dashboard</h3>
-      <p>Developed a Power BI dashboard to monitor risk assessments, complaint trends, and policy cancellations. This visual tool helped stakeholders track key metrics and drive data-informed decisions across customer service and compliance teams.</p>
-      <p><a href="bupa_dashboard.pdf" target="_blank">View PDF Dashboard</a></p>
+      <div>
+        <h3>Bupa Risk & Complaints Analysis Dashboard</h3>
+        <p>Developed a Power BI dashboard to monitor risk assessments, complaint trends, and policy cancellations. This visual tool helped stakeholders track key metrics and drive data-informed decisions across customer service and compliance teams.</p>
+        <p><a href="bupa_dashboard.pdf" target="_blank" rel="noopener noreferrer">View PDF Dashboard</a></p>
+      </div>
     </div>
+
+    <button id="more-projects-btn" type="button">More Projects</button>
   </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:innocent.igiwa@yahoo.com">innocent.igiwa@yahoo.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/innocent-igiwa/" target="_blank" rel="noopener noreferrer">linkedin.com/in/innocent-igiwa</a></p>
-    <p>GitHub: <a href="#" target="_blank">github.com/innocent-igiwa</a></p>
-  </section>
-
-</main>
-
-<footer>
-  <p>&copy; 2025 Innocent Igiwa. All rights reserved.</p>
-</footer>
-
 </body>
 </html>
